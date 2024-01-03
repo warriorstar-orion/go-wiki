@@ -54,7 +54,7 @@ func (page *WikipediaPage) GetContent() (string, error) {
 		"action":      "query",
 		"prop":        "extracts|revisions",
 		"explaintext": "",
-		"rvprop":      "ids",
+		"rvprop":      "content|ids",
 		"titles":      page.Title,
 	}
 	res, err := utils.WikiRequester(args)
